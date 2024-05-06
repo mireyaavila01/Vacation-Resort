@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vacation Resort Workshop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="css/site.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container">
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link"  href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="overnight_stay.html">Overnight Stay</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        
+                    </ul>
+                    
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1>Overnight Stay</h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col m-3">
+                    <label for="inputName">Name:</label>
+                    <input id="inputName" type="text">
+
+                    <label for="inputEmail">Email:</label>
+                    <input id="inputEmail" type="email">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col m-3">
+                    <label for="inputCheckInDate">Check-in Date:</label>
+                    <input id = "inputCheckInDate" type="date">
+
+                    <label for="inputNumberOfNights">Number Of Nights:</label>
+                    <input id="inputNumberOfNights" type="number" min="1" max="28">
+                </div>
+            </div>
+
+
+           
+
+            <div class="row">
+                <div class="col m-3">
+                    <h3>Room Type:</h3>
+                    <div>
+                        <input id="inputRoomQueen" type="radio" name="roomTypeRadio">
+                        <label for="inputRoomQueen">Queen</label>
+                    </div>
+                    
+                    <div>
+                        <input id="inputRoomKing" type="radio" name="roomTypeRadio">
+                        <label for="inputRoomKing">King</label>
+                    </div>
+                    
+                    <div>
+                        <input id="inputRoomBedroomSuite" type="radio" name="roomTypeRadio">
+                        <label for="inputRoomBedroomSuite">2-Bedroom Suite</label>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col m-3">
+                    <label for="inputNumberOfAdults">Number of Adults:</label>
+                    <input id="inputNumberOfAdults" type="number" min="1" max="4">
+
+                    <label for="inputNumberOfChildren">Number of Children:</label>
+                    <input id="inputNumberOfChildren" type="number" min="0" max="4">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col m-3">
+                    <h3>Will you be using any discounts?</h3>
+
+                    <div>
+                        <input id="inputNoDiscount" type="radio" name="discountTypeRadio">
+                        <label for="inputNoDiscount">No</label>
+                    </div>
+                    
+                    <div>
+                        <input id="inputAAA_SenDiscount" type="radio" name="discountTypeRadio">
+                        <label for="inputAAA_SenDiscount">AAA/Senior Discount (10%)</label>
+                    </div>
+                    
+                    <div>
+                        <input id="inputMilitaryDiscount" type="radio" name="discountTypeRadio">
+                        <label for="inputMilitaryDiscount">Military Discount (20%)</label>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="m-3">
+                <button id="estimateCostBtn" type="button" class="btn btn-secondary">Estimate Stay Cost</button>
+            </div>
+
+            <div class="row">
+                <div class="col m-3">
+                    <div>
+                        <label for="outputOriginalRoomCost"> The Orginal Room Cost: </label>
+                        <span id="outputOriginalRoomCost">xxx.xx</span>
+                    </div>
+                    <div>
+                        <label for="outputDiscount">The discount if applicable:</label> 
+                        <span id="outputDiscount">xxx.xx</span>
+                    </div>
+                    <div>
+                        <label for="outputDiscountedRoomCost">The Discounted Room Cost:</label>
+                        <span id="outputDiscountedRoomCost">xxx.xx</span>
+                    </div>
+                    <div>
+                        <label for="outputTax">The tax:</label>
+                        <span id="outputTax" >xxx.xx</span>
+                    </div>
+
+                    <hr>
+
+                    <div>
+                        <label for="outputTotalCostStay">Total cost of stay: </label>
+                        <span id="outputTotalCostStay">xxx.xx</span>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+    <footer>
+
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="scripts/site.js"></script>
+</body>
+
+</html>
